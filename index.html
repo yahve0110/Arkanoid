@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UT
+    -8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick breaker</title>
+    <link rel="icon" href="static/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/style.css">
+    <script type="module" src="src/game.js" defer></script>
+</head>
+<body>
+    <div id="main-menu" class="main-menu">
+        <img src="static/images/arkanoid.png" alt="">
+       
+        <button id="start-btn" class="glowbutton">Start Game</button>
+      </div>
+    <div id="game-container" class="hidden">
+        <div class="scoreboard">
+            <div class="score"></div>
+            <div class="lives"></div>
+            <div class="timer"></div>
+        </div>
+    <div class="container box">
+      
+
+    </div>
+    <div class="pause-menu">
+      <div class="pausemenu-btns-container">
+        <button id="resume-btn">Continue</button>
+        <button id="restart-btn">Restart</button>
+        <button id="exit-btn">Exit to main menu</button>
+      </div>
+    </div>
+    <div class="game-over-menu hidden">
+        <p>Game Over</p>
+        <button id="restart-btn-game-over">Restart</button>
+        <button id="main-menu-btn">Main Menu</button>
+    </div>
+    <div class="win-menu hidden">
+        <h1>Congratulations! You Win!</h1>
+        <button id="restart-btn-win">Restart</button>
+        <button id="main-menu-btn-win">Main Menu</button>
+    </div>
+</div>
+</body>
+</html>
