@@ -1,9 +1,9 @@
-import { backgroundMusic, playBackgroundMusic, playGameOverSound, playWinSound } from "./audio.js";
+import { backgroundMusic, playBackgroundMusic, playGameOverSound, playWinSound,stopBackgroundMusic } from "./audio.js";
 import { blockWidth } from "./ball.js";
 import { blocks } from "./blocks.js";
 import { livesDisplay, pauseMenu, showGameOverMenu, showWinMenu, togglePauseMenu } from "./menu.js";
 import {  resetGame } from "./reset.js";
-import { currentPosition, drawUser, isMovingLeft, isMovingRight, moveUser } from "./user.js";
+import { currentPosition, drawUser, isMovingLeft, isMovingRight, moveUser,user } from "./user.js";
 
 ///////////////////////////////////////////////////////////////
 //selectors
@@ -96,10 +96,14 @@ export function loseLife() {
     livesDisplay.innerHTML = `Lives: ${lives}`;
 }
 export function gameOver() {
+    user.style.display = 'none'; // Hide the user element
+
+    grid.removeChild(user); 
     setisGameRunning(false)
     scoreDisplay.innerHTML = 'GAME OVER';
     playGameOverSound()
     showGameOverMenu();
+
 }
 export function stopGame() {
     isGameRunning = false; 

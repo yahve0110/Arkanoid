@@ -3,7 +3,7 @@ import { drawBall, setBallPosition, setXDirection, setYDirection } from "./ball.
 import { addBlocks, clearBlocks, fillBlocks } from "./blocks.js";
 import { lives,  resetTimer,  score, scoreDisplay, setIsPaused, setLives, setScore, setisGameRunning, startTimer, stopGame } from "./game.js";
 import { gameContainer, hideGameOverMenu, livesDisplay, mainMenu, pauseMenu, winMenu } from "./menu.js";
-import { drawUser, moveUser, setcurrentPosition } from "./user.js";
+import { drawUser, moveUser, setcurrentPosition, user } from "./user.js";
 
 
 /////////////////////////////////////////////////////////////////
@@ -14,7 +14,7 @@ export function resetGame() {
     allBlocks.forEach((block) => block.remove());
 
    clearBlocks()
-
+   user.style.display = 'block';
    fillBlocks();
 
     addBlocks();

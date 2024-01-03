@@ -6,7 +6,7 @@ const userStart = [410, 10];
 export let currentPosition = userStart;
 export let isMovingLeft = false;
 export let isMovingRight = false;
-const user = document.createElement('div');
+export const user = document.createElement('div');
 user.classList.add('user');
 
 /////////////////////////////////////////////////////////////////
